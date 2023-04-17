@@ -19,7 +19,7 @@ constexpr T power(T base){
 
 
 template<typename T, T... ints>
-T sequence_product(std::integer_sequence<T, ints...> int_seq){
+T sequence_product(std::integer_sequence<T, ints...> int_seq) {
     T ret = 1;
     ((ret *= ints),...);
     return ret;
