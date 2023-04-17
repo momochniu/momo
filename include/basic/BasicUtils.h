@@ -26,7 +26,7 @@ T sequence_product(std::integer_sequence<T, ints...> int_seq){
 }
 
 template<typename T>
-constexpr T power(T base, int exp){
+constexpr T power(T base, int exp) {
     if constexpr(exp == 1){
         return base;
     }else{
@@ -36,7 +36,7 @@ constexpr T power(T base, int exp){
 
 
 template<typename T>
-std::vector<T> expand(const std::vector<std::vector<T>> &src){
+std::vector<T> expand(const std::vector<std::vector<T>> &src) {
     std::vector<T> dst;
     int total = std::accumulate(src.begin(), src.end(), 0, 
         [](auto acc, auto const &part){
